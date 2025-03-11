@@ -22,6 +22,24 @@ module.exports = {
             chunks: ['index'],
             filename: 'index.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/tasks.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'tasks.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/404.html',
+            inject: true,
+            chunks: ['index'],
+            filename: '404.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/about.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'about.html'
+        }),
     ],
     devServer: {
         static: {

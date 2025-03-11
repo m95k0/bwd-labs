@@ -1,0 +1,209 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  height: 60px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Кнопка-бургер */
+.menu-button {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1001;
+  background: transparent;
+  overflow: visible;
+}
+
+.menu-button span {
+  background-color: white;
+  width: 40px;
+  height: 5px;
+  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+}
+
+/* Меню */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #222;
+  transition: left 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.menu ul li.active {
+  background-color: #555;
+}
+
+.menu ul li.active a {
+  color: #fff;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Скрытый чекбокс */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-checkbox:checked ~ .navbar .menu {
+  left: 0px;
+}
+
+.menu-button span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.menu-button span:nth-child(2) {
+  opacity: 1;
+}
+.menu-button span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.menu-checkbox:checked ~ .navbar .menu-button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.menu-checkbox:checked ~ .navbar .menu-button span:nth-child(2) {
+  opacity: 0;
+}
+.menu-checkbox:checked ~ .navbar .menu-button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Контент */
+.page-wrapper {
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 0px;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.menu-checkbox:checked ~ .page-wrapper {
+  margin-left: 250px;
+}
+
+/* Главная страница */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.logo {
+  width: 400px; /* Размер логотипа */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+
+.error-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.error-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  max-height: 400px; /* Ограничение высоты для читаемости */
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f46b45;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.back-link:hover {
+  background-color: #eea849;
+}
+
+/* Список задач (flexbox) */
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch; /* Выравнивание по высоте */
+}
+
+.task-card {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  flex: 1 1 300px; /* Адаптивная ширина */
+  max-width: 100%;
+  min-height: 150px; /* Минимальная высота для унификации */
+  display: flex; /* Внутренний flex для текста */
+  flex-direction: column;
+  justify-content: space-between; /* Распределяем содержимое по высоте */
+}
