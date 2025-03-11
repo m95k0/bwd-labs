@@ -1,0 +1,15 @@
+ђҐ¦Ё¬ ўлў®¤  Є®¬ ­¤ ­  нЄа ­ (ECHO) ўЄ«озҐ­.
+# Зависимости Node.js
+node_modules/
+
+# Папки сборки
+/dist
+/build
+
+# Настройки IDE
+.vscode/
+.idea/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
