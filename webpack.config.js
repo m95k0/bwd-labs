@@ -6,6 +6,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     module: {
         rules: [
@@ -13,6 +14,13 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg|mp4|webm)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[name][ext]'
+                }
+            }
         ],
     },
     plugins: [
@@ -46,6 +54,16 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         open: true,
+        // Добавим, чтобы сервер обслуживал файлы из src, если они не собраны
+        static: [
+            {
+                directory: path.join(__dirname, 'src'),
+                publicPath: '/'
+            },
+            {
+                directory: path.join(__dirname, 'dist'),
+            }
+        ]
     },
     mode: 'development',
 };

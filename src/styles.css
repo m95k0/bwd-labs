@@ -132,16 +132,13 @@ body {
 }
 
 .hero-section {
-  text-align: center;
-  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.logo {
-  width: 400px; /* Размер логотипа */
-  height: auto;
-  margin-bottom: 20px;
+.logo, .hero-image {
+  max-width: 100%;
 }
-
 h1 {
   font-size: 2.5em;
   color: #333;
