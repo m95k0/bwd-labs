@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница не найдена</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    
+    <header class="navbar">
+        <label for="menu-toggle" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li class="active"><a href="404.html">Проекты</a></li>
+                <li><a href="tasks.html">Задачи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="page-wrapper">
+        <main class="content">
+            <div class="error-section">
+                <h1>404 - Страница не найдена</h1>
+                <p>К сожалению, такой страницы не существует. Возможно, вы ввели неверный адрес или страница была удалена.</p>
+                <video loop class="error-video" id="errorVideo">
+                    <source src="404-video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <a href="index.html" class="back-link">Вернуться на главную</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
