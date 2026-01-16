@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <header class="navbar">
+        <label for="menu-toggle" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="404.html">Проекты</a></li>
+                <li><a href="tasks.html">Задачи</a></li>
+                <li class="active"><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <main class="content">
+            <h1>О приложении</h1>
+            <p>Это веб-приложение предназначено для управления задачами. Оно позволяет добавлять, перемещать и удалять задачи.</p>
+            <h2>Функции</h2>
+              <ul>
+                <li>Добавление задач</li>
+                <li>Перемещение задач между статусами</li>
+                <li>Удаление задач</li>
+                <li>Адаптивный интерфейс</li>
+        </main>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
+

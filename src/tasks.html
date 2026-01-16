@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи - Task Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    
+    <!-- Шапка -->
+    <header class="navbar">
+        <label for="menu-toggle" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="404.html">Проекты</a></li>
+                <li class="active"><a href="tasks.html">Задачи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Контент -->
+    <div class="page-wrapper">
+        <main class="content">
+            <h1>Список задач</h1>
+            <button id="addTaskBtn" class="add-task-btn">Добавить задачу</button>
+            
+            <!-- Список задач -->
+            <div class="task-list">
+                <!-- <div class="task-card">
+                    <h3>Задача 1</h3>
+                    <p>Описание первой задачи.</p>
+                </div>
+                <div class="task-card">
+                    <h3>Задача 2</h3>
+                    <p>Описание второй задачи.</p>
+                </div> -->
+            </div>
+            
+            <!-- Модальное окно -->
+            <dialog id="taskModal" class="task-modal">
+                <form class="task-form">
+                    <h2>Новая задача</h2>
+                    <label>
+                        Название:
+                        <input type="text" name="title" required>
+                    </label>
+                    <label>
+                        Описание:
+                        <textarea name="description" required></textarea>
+                    </label>
+                    <div class="modal-buttons">
+                        <button type="submit" class="submit-btn">Добавить</button>
+                        <button type="button" class="cancel-btn">Отмена</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+    </div>
+
+    <!-- Подключение внешнего JS -->
+    <script src="script.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
